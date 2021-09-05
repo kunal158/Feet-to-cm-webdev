@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #EBF3FB;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.calculate-container {
+  border: 1px solid #F6F6F6;
+  background-color: #FFF;
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  margin: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+.calculate-container::before,
+.calculate-container::after {
+  content: '';
+  position: absolute;
+  border-radius: 15px;
+  z-index: -1;
+}
+.calculate-container::before {
+  width: 90%;
+  height: 120%;
+  background-color: #41bacaaa;
+  top: -10%;
+  left: 20%;
+}
+.calculate-container::after {
+  background: linear-gradient(90deg, #609e5eaa 0%, #FF6A95aa 99%);
+  width: 8rem;
+  height: 9rem;
+  left: -5%;
+  bottom: -5%;
+  z-index: -2;
+}
+
+.calculate-container .title {
+font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: .8rem;
+}
+
+.form label,
+.form input {
+  display: block;
+  width: 100%
+}
+
+.form input {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  padding: .5rem;
+  border: 1px solid #9D9DC4;
+  border-radius: 5px;
+  outline: none;
+  transition: box-shadow .1s ease-in;
+}
+.form input:focus {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .1);
+}
+
+.form #button {
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  background-color: rgb(184, 211, 224);
+  height:2.2rem;
+  width :8rem;
+  border-radius: 45px;
+  border: 2px solid;
+  transition: box-shadow .2s ease-in;
+  margin-top: 0.1rem;
+}
+.form #button:hover {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, .2);
+}
+
+#results{
+    color: blue;
+    font-size: 1.5em;
+    text-align: center;
+}
+.bottomleft {
+  position: absolute;
+  bottom: 34px;
+  left:60rem;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 330px) {
+  .form .btn {
+    width: 100%;
+    margin-top: .3rem;
+  }
+}
