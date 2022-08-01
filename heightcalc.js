@@ -19,7 +19,7 @@ const results = document.querySelector('#results');
     } else {
         //make conversion to centimers
         //cm = inches * 2.54
-        let totalInches = (feet*12) + inches;
+        let totalInches = ((feet*12) + inches)*2.54;
         results.textContent = `${totalInches} cm`;
         document.querySelector('#feet').value = '';
         document.querySelector('#inches').value = '';
